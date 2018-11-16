@@ -1,17 +1,17 @@
 #ifndef RED_H
 #define RED_H
-
-#include "red_global.h"
 #include "capa.h"
 #include <vector>
+using namespace std;
 
-class REDSHARED_EXPORT Red{
+class Red{
 
-    vector <Capa> listaCapas;
+    vector<Capa> listaCapas;
 
 public:
+
     Red();
-    void agregarCapa(int);
+    void AgregarCapa(int);
     //clasificar
     //entrenar
 };
