@@ -5,6 +5,9 @@
 #include <ctime>
 #include <iostream>
 #include <sstream>
+#include <random>
+
+#include <initializer_list>
 
 using namespace std;
 
@@ -20,9 +23,20 @@ class Neurona{
 
 public:
     Neurona(){
-        srand (static_cast <unsigned> (time(0)));
-        carga=static_cast <float> (rand()) / static_cast <float> (RAND_MAX);;
-        umbral=static_cast <float> (rand()) / static_cast <float> (RAND_MAX);;
+        //srand (time(NULL));
+        carga=getRandom();
+        //srand (time(NULL));
+        umbral=getRandom();
+
+    }
+
+    float getRandom()
+    {
+        //http://www.cplusplus.com/reference/random/uniform_real_distribution/
+
+        static default_random_engine e;
+        static uniform_real_distribution<> dis(0, 1); // rage 0 - 1
+        return dis(e);
     }
     float getCarga(){
         return carga;

@@ -14,6 +14,9 @@ public:
     void AgregarCapa(int);
     //clasificar
     //entrenar
+    void entrenar(){
+
+    }
 };
 
 #endif // RED_H

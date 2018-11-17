@@ -9,7 +9,9 @@ class Capa{
     vector<Neurona> listaNeuronas;
 
 public:
-
+    Capa(){
+        //?
+    }
     void AgregarNeurona(Neurona n){
         listaNeuronas.push_back(n);
     }
