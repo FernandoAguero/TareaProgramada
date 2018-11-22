@@ -10,29 +10,21 @@ int main(int argc, char *argv[])
 
     Red red1 = Red();
 
-    cout << "Primera capa:" << endl << endl;
     red1.AgregarCapa(1);
-    cout << endl << endl;
-
-    cout << "Segunda capa:" << endl << endl;
     red1.AgregarCapa(3);
-    cout << endl << endl;
-
-    cout << "Tercera capa:" << endl << endl;
     red1.AgregarCapa(5);
-    cout << endl << endl;
-
-    cout << "Cuarta capa:" << endl << endl;
     red1.AgregarCapa(5);
-    cout << endl << endl;
-
-    cout << "Quinta capa:" << endl << endl;
     red1.AgregarCapa(3);
-    cout << endl << endl;
-
-    cout << "Ultima capa:" << endl << endl;
     red1.AgregarCapa(1);
-    cout << endl << endl;
+
+    red1.MostrarRed();
+    int c=0;
+    while(c<100){
+    cout << red1.Entrenar(c)<<endl;
+    c++;
+    }
+
+    red1.MostrarRed();
 
 
     /*Neurona n;

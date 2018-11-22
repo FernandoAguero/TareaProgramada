@@ -13,8 +13,9 @@ public:
     Red();
     void AgregarCapa(int);
     void Conectar();
+    void MostrarRed();
     //clasificar
-    //entrenar
+    float Entrenar(float);
 };
 
 #endif // RED_H

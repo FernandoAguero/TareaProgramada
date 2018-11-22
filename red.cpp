@@ -7,7 +7,6 @@ void Red::AgregarCapa(int cantidadNeuronas){
     for(int i=0; i<cantidadNeuronas; i++){
         Neurona n = Neurona();
         c.AgregarNeurona(n);
-        cout << "Neurona " << i << ":  Carga = " << n.getCarga() << "  Umbral = " << n.getUmbral() << endl;
     }
     listaCapas.push_back(c);
 }
@@ -21,3 +20,25 @@ void Red::Conectar(){
         }
     }
 }
+
+void Red::MostrarRed(){
+    for(int i=0; i<listaCapas.size(); i++){
+        cout << "Capa " << i << ": " << endl << endl;
+        for(int i2=0; i2<listaCapas[i].listaNeuronas.size(); i2++){
+            cout << "Neurona " << i << ":  Carga = " << listaCapas[i].listaNeuronas[i2].getCarga() << "  Umbral = " << listaCapas[i].listaNeuronas[i2].getUmbral() << endl;
+        }
+        cout << endl << endl;
+    }
+}
+
+float Red::Entrenar(float n){
+    for(int i=0; i<listaCapas.size(); i++){
+        for(int i2=0; i2<listaCapas[i].listaNeuronas.size(); i2++){
+            n = n * listaCapas[i].listaNeuronas[i2].getCarga();
+
+        }
+    }
+    return n;
+}
+
+
