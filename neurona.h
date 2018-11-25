@@ -34,7 +34,7 @@ public:
         //http://www.cplusplus.com/reference/random/uniform_real_distribution/
 
         static default_random_engine e;
-        static uniform_real_distribution<> dis(0, 1); // rage 0 - 1
+        static uniform_real_distribution<> dis(0, 1); // rango 0 - 1
         return dis(e);
     }
 
@@ -65,6 +65,10 @@ public:
     void AgregarConexion(Neurona n, float peso){
         Conexion c = Conexion(n, peso);
         listaConexiones.push_back(c);
+    }
+
+    void ModificarCarga(float n){
+        carga=n;
     }
 };
 
