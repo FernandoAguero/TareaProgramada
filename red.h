@@ -16,6 +16,8 @@ public:
     void MostrarRed();
     //clasificar
     float Entrenar(float);
+    float CalcularFallo(float,float);
+    void ModificarCargas(float);
 };
 
 #endif // RED_H
